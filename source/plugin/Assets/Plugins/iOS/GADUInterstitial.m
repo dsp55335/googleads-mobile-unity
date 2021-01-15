@@ -6,6 +6,7 @@
 #import <UIKit/UIKit.h>
 
 #import "GADUPluginUtil.h"
+#import "UnityInterface.h"
 
 @interface GADUInterstitial () <GADInterstitialDelegate>
 @end
@@ -56,10 +57,6 @@
   }
 }
 
-- (NSString *)mediationAdapterClassName {
-  return self.interstitial.responseInfo.adNetworkClassName;
-}
-
 - (GADResponseInfo *)responseInfo {
   return self.interstitial.responseInfo;
 }
@@ -105,12 +102,6 @@
 
   if (self.didDismissCallback) {
     self.didDismissCallback(self.interstitialClient);
-  }
-}
-
-- (void)interstitialWillLeaveApplication:(GADInterstitial *)ad {
-  if (self.willLeaveCallback) {
-    self.willLeaveCallback(self.interstitialClient);
   }
 }
 

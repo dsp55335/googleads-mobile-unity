@@ -6,6 +6,7 @@
 #import <UIKit/UIKit.h>
 
 #import "GADUPluginUtil.h"
+#import "UnityInterface.h"
 
 @interface GADURewardedAd () <GADRewardedAdDelegate>
 @end
@@ -62,10 +63,6 @@
   } else {
     NSLog(@"GoogleMobileAdsPlugin: Rewarded ad is not ready to be shown.");
   }
-}
-
-- (NSString *)mediationAdapterClassName {
-  return self.rewardedAd.responseInfo.adNetworkClassName;
 }
 
 - (GADResponseInfo *)responseInfo {

@@ -130,8 +130,7 @@ namespace GoogleMobileAds.Unity
                 {
                   OnAdFailedToLoad.Invoke(this, new LoadAdErrorClientEventArgs()
                   {
-                      LoadAdErrorClient = new LoadAdErrorClient(),
-                      Message = "Prefab Ad is Null"
+                      LoadAdErrorClient = new LoadAdErrorClient()
                   });
                 }
             }

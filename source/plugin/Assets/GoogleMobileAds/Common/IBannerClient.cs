@@ -63,9 +63,6 @@ namespace GoogleMobileAds.Common
         // Set the position of the banner view using custom position.
         void SetPosition(int x, int y);
 
-        // Returns the mediation adapter class name.
-        string MediationAdapterClassName();
-
         // Returns ad request Response info client.
         IResponseInfoClient GetResponseInfoClient();
 

@@ -119,8 +119,7 @@ namespace GoogleMobileAds.Api
                     LoadAdError loadAdError = new LoadAdError(args.LoadAdErrorClient);
                     this.OnAdFailedToLoad(this, new AdFailedToLoadEventArgs()
                     {
-                        LoadAdError = loadAdError,
-                        Message = loadAdError.GetMessage()
+                        LoadAdError = loadAdError
                     });
                 }
             };
@@ -157,13 +156,6 @@ namespace GoogleMobileAds.Api
                 }
             };
 
-        }
-
-        // Returns the mediation adapter class name.
-        [Obsolete("MediationAdapterClassName() is deprecated, use GetResponseInfo.MediationAdapterClassName() instead.")]
-        public string MediationAdapterClassName()
-        {
-            return this.client.MediationAdapterClassName();
         }
 
         // Returns ad request response info.

@@ -95,12 +95,6 @@ namespace GoogleMobileAds.Android
             };
         }
 
-        // Returns the mediation adapter class name.
-        public string MediationAdapterClassName()
-        {
-            return this.androidRewardedAd.Call<string>("getMediationAdapterClassName");
-        }
-
         // Returns ad request response info
         public IResponseInfoClient GetResponseInfoClient()
         {

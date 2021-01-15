@@ -109,12 +109,6 @@ namespace GoogleMobileAds.Android
             this.bannerView.Call("setPosition", x, y);
         }
 
-        // Returns the mediation adapter class name.
-        public string MediationAdapterClassName()
-        {
-            return this.bannerView.Call<string>("getMediationAdapterClassName");
-        }
-
         public IResponseInfoClient GetResponseInfoClient()
         {
 

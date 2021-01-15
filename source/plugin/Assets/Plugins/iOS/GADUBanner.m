@@ -187,10 +187,6 @@
   [self.bannerView removeFromSuperview];
 }
 
-- (NSString *)mediationAdapterClassName {
-  return self.bannerView.responseInfo.adNetworkClassName;
-}
-
 - (GADResponseInfo *)responseInfo {
   return self.bannerView.responseInfo;
 }

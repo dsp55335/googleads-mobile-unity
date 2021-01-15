@@ -212,12 +212,6 @@ namespace GoogleMobileAds.iOS
             Externs.GADUSetBannerViewCustomPosition(this.BannerViewPtr, x, y);
         }
 
-        // Returns the mediation adapter class name.
-        public string MediationAdapterClassName()
-        {
-            return Utils.PtrToString(Externs.GADUMediationAdapterClassNameForBannerView(this.BannerViewPtr));
-        }
-
         public IResponseInfoClient GetResponseInfoClient()
         {
             return new ResponseInfoClient(ResponseInfoClientType.AdLoaded, this.BannerViewPtr);
@@ -257,8 +251,7 @@ namespace GoogleMobileAds.iOS
             {
                 LoadAdErrorClientEventArgs args = new LoadAdErrorClientEventArgs()
                 {
-                    LoadAdErrorClient = new LoadAdErrorClient(error),
-                    Message = Externs.GADUGetAdErrorMessage(error)
+                    LoadAdErrorClient = new LoadAdErrorClient(error)
                 };
                 client.OnAdFailedToLoad(client, args);
             }
